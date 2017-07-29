@@ -1,0 +1,25 @@
+<app-navbar></app-navbar>
+<div id="wrapper">
+  <app-sidebar></app-sidebar>
+  <div id="main-wrapper" class="col-md-11 pull-right">
+    <div id="main">
+      <hr/>
+      <app-scheduler
+        editable="true"
+        defaultView="timelineDay"
+        [events]="events"
+        [resources]="resources"
+        [defaultDate]="defaultDate"
+        slotLabelFormat= "MMMM DD, HH:mm"
+        resourceAreaWidth="120"
+        titleFormat="YYYY-MM-DD dddd"
+        nowIndicator="true"
+        [header]="headerConfig"
+        [resourceColumns]="resourceCol"
+      ></app-scheduler>
+    </div>
+
+    <!--<app-footer></app-footer>-->
+
+  </div>
+</div>

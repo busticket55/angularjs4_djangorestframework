@@ -1,0 +1,93 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+@import "../node_modules/primeng/resources/primeng.min.css";
+@import "../node_modules/primeng/resources/themes/ludvig/theme.css";
+/*@import "../node_modules/fullcalendar/dist/fullcalendar.min.css";
+@import "../node_modules/fullcalendar/dist/fullcalendar.print.min.css";*/
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+
+.navbar-default {
+  background-color: #25238e;
+  border-color: #25238e;
+}
+.navbar-default .navbar-brand {
+  color: #FFFFFF;}
+
+body {
+  padding-top: 50px;
+  overflow: hidden;
+}
+#wrapper {
+  min-height: 100%;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  display: inline-block;
+}
+#main-wrapper {
+  height: 100%;
+  overflow-y: auto;
+  padding: 50px 0 0px 0;
+}
+#main {
+  position: relative;
+  height: 100%;
+  overflow-y: auto;
+  padding: 0 15px;
+}
+#sidebar-wrapper {
+  height: 100%;
+  padding: 50px 0 0px 0;
+  position: fixed;
+  border-right: 1px solid gray;
+  background-color: #36404C;
+}
+#sidebar {
+  position: relative;
+  height: 100%;
+  overflow:hidden;
+  color: #332d4f;
+}
+#sidebar .list-group-item {
+  border-radius: 0;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  background-color: #36404C;
+  color: aliceblue;
+}
+@media (max-width: 992px) {
+  body {
+    padding-top: 0px;
+  }
+}
+@media (min-width: 992px) {
+  #main-wrapper {
+    float:right;
+  }
+}
+@media (max-width: 992px) {
+  #main-wrapper {
+    padding-top: 0px;
+  }
+}
+@media (max-width: 992px) {
+  #sidebar-wrapper {
+    position: static;
+    height:auto;
+    max-height: 300px;
+    border-right:0;
+  }
+}
+.footer {
+  background-color:#ffffff;
+  bottom:0;
+  position:fixed;
+  padding:10px;
+}
+
+

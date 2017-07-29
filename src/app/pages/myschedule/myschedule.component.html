@@ -1,0 +1,19 @@
+
+<app-navbar></app-navbar>
+<div id="wrapper">
+  <app-sidebar></app-sidebar>
+  <div id="main-wrapper" class="col-md-11 pull-right">
+    <div id="main">
+      <hr/>
+      <p-schedule [events]="events" [height]="auto" [fixedWeekCount]="false" [header]="headerConfig" (onEventClick)="handleEventClick($event)"></p-schedule>
+    </div>
+
+    <!--<app-footer></app-footer>-->
+
+  </div>
+</div>
+
+
+
+
+
