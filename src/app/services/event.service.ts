@@ -6,8 +6,25 @@ import {Event} from '../model/event.model';
 import {Http} from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 
+import 'rxjs/add/operator/map';
+
+
 @Injectable()
 export class EventService {
+
+	constructor(public http:Http){
+
+
+	console.log('EventService is rannnnnn....');
+	}
+
+
+	getPost(){
+	return this.http.get('http://138.197.101.197/api/dummyevents/')
+		.map (res => res.json());
+	}
+
+
 
   private apiURL = ''
 

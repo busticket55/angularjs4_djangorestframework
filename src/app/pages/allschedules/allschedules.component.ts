@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from '../../services/index';
 import { Router } from '@angular/router';
+import { EventService } from '../../services/event.service'
 
 @Component({
   selector: 'app-allschedules',
@@ -17,10 +18,10 @@ export class AllschedulesComponent implements OnInit {
   loading = false;
   error = '';
 
+constructor(public eventService:EventService) {
+    console.log('all schedule running...');
+  }
 
-constructor(
-    private router: Router,
-    private authenticationService: AuthenticationService) { }
 
   ngOnInit(){
 
@@ -103,16 +104,6 @@ constructor(
         field: 'title'
       }];
   }
-
-
-  /*handleEventClick(e: any) {
-    //e.event = Selected event
-    //e.jsEvent = Browser click event
-    //e.view = Current view object
-    console.log('Selected event: ' + e.event);
-    console.log('Browser click event: ' + e.jsEvent);
-    console.log('Current view object: ' + e.view);
-  }*/
 
 
 }

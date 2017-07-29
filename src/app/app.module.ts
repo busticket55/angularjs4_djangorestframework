@@ -33,6 +33,7 @@ import { NavbarComponent } from './base_components/navbar/navbar.component';
 import { SidebarComponent } from './base_components/sidebar/sidebar.component';
 import { FooterComponent } from './base_components/footer/footer.component';
 import { AllschedulesComponent } from './pages/allschedules/allschedules.component';
+import { EventService } from './services/event.service';
 
 @NgModule({
   declarations: [
@@ -63,6 +64,7 @@ import { AllschedulesComponent } from './pages/allschedules/allschedules.compone
     AuthGuard,
     AuthenticationService,
     UserService,
+    EventService,
 
     // providers used to create fake backend
     //fakeBackendProvider,
