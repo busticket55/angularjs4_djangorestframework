@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from '../../services/index';
 import { Router } from '@angular/router';
 import { EventService } from '../../services/event.service'
+import { Http, Headers, RequestOptions, Response } from '@angular/http';
+import { User } from '../../model/index';
 
 @Component({
   selector: 'app-allschedules',
@@ -17,16 +19,24 @@ export class AllschedulesComponent implements OnInit {
   model: any = {};
   loading = false;
   error = '';
+  users: User[] = [];
 
-constructor(public eventService:EventService) {
+  constructor(public eventService:EventService,
+            private http: Http,
+            private authenticationService: AuthenticationService) {
     console.log('all schedule running...');
   }
 
 
   ngOnInit(){
 
+    this.eventService.getPost()
+            .subscribe(users => {
+                this.users = users;
+                console.log(this.users);
+            });
 
-
+/*
     this.resources = [
       {
       id: 'a',
@@ -102,7 +112,7 @@ constructor(public eventService:EventService) {
       {
         labelText: 'Driver',
         field: 'title'
-      }];
+      }];*/
   }
 
 
